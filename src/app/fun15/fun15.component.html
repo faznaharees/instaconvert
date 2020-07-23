@@ -1,0 +1,49 @@
+<center><ion-card>
+  <ion-card-header>
+    <ion-card-subtitle>InstaConvert</ion-card-subtitle>
+    <ion-card-title> Power</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    <ion-item lines=none>
+      <ion-input type="number" [value]="range" (input)="setQuantity3($event.target.value)" (ionChange)="this.calculate()"></ion-input>
+
+      <ion-select value={select1} placeholder="Select One" (ionChange)="setQuantity1($event.target.value)">
+        <ion-select-option value="metricTon">watts</ion-select-option>
+        <ion-select-option value="kilogram">kilowatts</ion-select-option>
+        <ion-select-option value="gram">megawatts</ion-select-option>
+        <ion-select-option value="milligram">gigawatts</ion-select-option>
+        <ion-select-option value="mcg">btuHour</ion-select-option>
+        <ion-select-option value="longTon">btuMinute</ion-select-option>
+        <ion-select-option value="shortTon">btuSecond</ion-select-option>
+        <ion-select-option value="stones">caloriesthHour</ion-select-option>
+        <ion-select-option value="pound">caloriesthMinute</ion-select-option>
+        <ion-select-option value="ounce">caloriesthSecond</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item lines=none>
+      <ion-input type="number" [value]="result" (input)="setQuantity4($event.target.value)" (ionChange)="this.calculate()"></ion-input>
+      <ion-select   value={select2} placeholder="Select One" (ionChange)="setQuantity2($event.target.value)">
+        <ion-select-option value="atm">Atmosphere</ion-select-option>
+        <ion-select-option value="b">bar</ion-select-option>
+        <ion-select-option value="dcm">dynes/cm2</ion-select-option>
+        <ion-select-option value="ihg">in. Hg</ion-select-option>
+        <ion-select-option value="iw">in. water</ion-select-option>
+        <ion-select-option value="k">kg/cm2</ion-select-option>
+        <ion-select-option value="m">mbar</ion-select-option>
+        <ion-select-option value="mtm">mtorr or micron</ion-select-option>
+        <ion-select-option value="pnm">Pa or N/m2</ion-select-option>
+        <ion-select-option value="kpa">kPa</ion-select-option>
+        <ion-select-option value="psi">PSI or lb/in2</ion-select-option>
+      </ion-select>
+    </ion-item>
+      <ion-grid>
+        <ion-row>
+          <ion-col> <h1>{{range}} {{select1}} = {{result}} {{select2}} </h1></ion-col>
+          
+        </ion-row>
+      </ion-grid>
+  </ion-card-content>
+</ion-card>
+</center>
+

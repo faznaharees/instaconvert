@@ -1,0 +1,33 @@
+<center><ion-card>
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+     <center><h2>InstaConvert</h2></center>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+</ion-card></center>
+
+<center>
+  <ion-searchbar  [(ngModel)]="searchTerm"
+  (ionChange)="setFilteredItems()">
+</ion-searchbar></center>
+
+<ion-content>
+  <center>
+    <ion-card>
+    <ion-list>
+      <ion-item-group *ngFor="let list of names">
+      <ion-item-divider sticky>
+        <div id="borderLeft"></div>
+        <ion-router-link href="{{list.id}}"><ion-label>
+        {{list.title }}  
+        </ion-label></ion-router-link>
+        
+      </ion-item-divider>
+      <div id="borderBottom"></div>
+    </ion-item-group>
+    </ion-list>
+  </ion-card>
+    </center>
+</ion-content>

@@ -1,0 +1,52 @@
+<center><ion-card>
+  <ion-card-header>
+    <ion-card-subtitle>InstaConvert</ion-card-subtitle>
+    <ion-card-title> Power</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    <ion-item lines=none>
+      <ion-input type="number" [value]="range" (input)="setQuantity3($event.target.value)" (ionChange)="this.calculate()"></ion-input>
+
+      <ion-select value={select1} placeholder="Select One" (ionChange)="setQuantity1($event.target.value)">
+        <ion-select-option value="newtons">newtons</ion-select-option>
+        <ion-select-option value="kilonewtons">kilonewtons</ion-select-option>
+        <ion-select-option value="meganewtons">meganewtons</ion-select-option>
+        <ion-select-option value="dynes">dynes</ion-select-option>
+        <ion-select-option value="kilogramForce">kilogramForce</ion-select-option>
+        <ion-select-option value="kips">kips</ion-select-option>
+        <ion-select-option value="pundsForce">pundsForce</ion-select-option>
+        <ion-select-option value="pundals">pundals</ion-select-option>
+        <ion-select-option value="sthenes=kn">sthenes=kn</ion-select-option>
+        <ion-select-option value="tonnesForce">tonnesForce</ion-select-option>
+        <ion-select-option value="tonsForceUk">tonsForceUk</ion-select-option>
+        <ion-select-option value="tonsForceUs">tonsForceUs</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item lines=none>
+      <ion-input type="number" [value]="result" (input)="setQuantity4($event.target.value)" (ionChange)="this.calculate()"></ion-input>
+      <ion-select   value={select2} placeholder="Select One" (ionChange)="setQuantity2($event.target.value)">
+        <ion-select-option value="newtons">newtons</ion-select-option>
+        <ion-select-option value="kilonewtons">kilonewtons</ion-select-option>
+        <ion-select-option value="meganewtons">meganewtons</ion-select-option>
+        <ion-select-option value="dynes">dynes</ion-select-option>
+        <ion-select-option value="kilogramForce">kilogramForce</ion-select-option>
+        <ion-select-option value="kips">kips</ion-select-option>
+        <ion-select-option value="pundsForce">pundsForce</ion-select-option>
+        <ion-select-option value="pundals">pundals</ion-select-option>
+        <ion-select-option value="sthenes=kn">sthenes=kn</ion-select-option>
+        <ion-select-option value="tonnesForce">tonnesForce</ion-select-option>
+        <ion-select-option value="tonsForceUk">tonsForceUk</ion-select-option>
+        <ion-select-option value="tonsForceUs">tonsForceUs</ion-select-option>
+      </ion-select>
+    </ion-item>
+      <ion-grid>
+        <ion-row>
+          <ion-col> <h1>{{range}} {{select1}} = {{result}} {{select2}} </h1></ion-col>
+          
+        </ion-row>
+      </ion-grid>
+  </ion-card-content>
+</ion-card>
+</center>
+

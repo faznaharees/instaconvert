@@ -1,0 +1,22 @@
+<center><ion-card>
+  <ion-card-header>
+    <ion-card-subtitle>InstaConvert</ion-card-subtitle>
+    <ion-card-title>0-25mA Instrumentation</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    <ion-list>
+      <ion-range min="0" max="25" color="secondary" [value]="range" (ionChange)="setQuantity1($event.target.value)" (ionChange)="this.calculate()">
+        <ion-label slot="start">0</ion-label>
+        <ion-label slot="end">25</ion-label>
+      </ion-range>  </ion-list>
+  
+      <ion-grid>
+        <ion-row>
+          <ion-col> <h1>{{range}} mA = {{result}}%</h1></ion-col>
+          
+        </ion-row>
+      </ion-grid>
+  </ion-card-content>
+</ion-card>
+</center>

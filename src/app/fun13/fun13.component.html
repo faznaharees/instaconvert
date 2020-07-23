@@ -1,0 +1,48 @@
+<center><ion-card>
+  <ion-card-header>
+    <ion-card-subtitle>InstaConvert</ion-card-subtitle>
+    <ion-card-title> Mass</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    <ion-item lines=none>
+      <ion-input type="number" [value]="range" (input)="setQuantity3($event.target.value)" (ionChange)="this.calculate()"></ion-input>
+
+      <ion-select value={select1} placeholder="Select One" (ionChange)="setQuantity1($event.target.value)">
+        <ion-select-option value="metricTon">metricTon</ion-select-option>
+        <ion-select-option value="kilogram">kilogram</ion-select-option>
+        <ion-select-option value="gram">gram</ion-select-option>
+        <ion-select-option value="milligram">milligram</ion-select-option>
+        <ion-select-option value="mcg">mcg</ion-select-option>
+        <ion-select-option value="longTon">longTon</ion-select-option>
+        <ion-select-option value="shortTon">shortTon</ion-select-option>
+        <ion-select-option value="stones">stones</ion-select-option>
+        <ion-select-option value="pound">pound</ion-select-option>
+        <ion-select-option value="ounce">ounce</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item lines=none>
+      <ion-input type="number" [value]="result" (input)="setQuantity4($event.target.value)" (ionChange)="this.calculate()"></ion-input>
+      <ion-select   value={select2} placeholder="Select One" (ionChange)="setQuantity2($event.target.value)">
+        <ion-select-option value="metricTon">metricTon</ion-select-option>
+        <ion-select-option value="kilogram">kilogram</ion-select-option>
+        <ion-select-option value="gram">gram</ion-select-option>
+        <ion-select-option value="milligram">milligram</ion-select-option>
+        <ion-select-option value="mcg">mcg</ion-select-option>
+        <ion-select-option value="longTon">longTon</ion-select-option>
+        <ion-select-option value="shortTon">shortTon</ion-select-option>
+        <ion-select-option value="stones">stones</ion-select-option>
+        <ion-select-option value="pound">pound</ion-select-option>
+        <ion-select-option value="ounce">ounce</ion-select-option>
+      </ion-select>
+    </ion-item>
+      <ion-grid>
+        <ion-row>
+          <ion-col> <h1>{{range}} {{select1}} = {{result}} {{select2}} </h1></ion-col>
+          
+        </ion-row>
+      </ion-grid>
+  </ion-card-content>
+</ion-card>
+</center>
+

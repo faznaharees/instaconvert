@@ -1,0 +1,76 @@
+<center><ion-card>
+  <ion-card-header>
+    <ion-card-subtitle>InstaConvert</ion-card-subtitle>
+    <ion-card-title>Electric Current</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    <ion-item>
+      <ion-input type="number" [value]="range" (input)="setQuantity3($event.target.value)" (ionChange)="this.calculate()"></ion-input>
+
+      <ion-select value={select1} placeholder="Select One" (ionChange)="setQuantity1($event.target.value)">
+        <ion-select-option value="Abampere">Abampere</ion-select-option>
+        <ion-select-option value="Ampere">Ampere</ion-select-option>
+        <ion-select-option value="Biot">Biot</ion-select-option>
+        <ion-select-option value="Centiampere">Centiampere</ion-select-option>
+        <ion-select-option value="Coulombsecond">Coulombsecond</ion-select-option>
+        <ion-select-option value="Emuofcurrent">Emuofcurrent</ion-select-option>
+        <ion-select-option value="Esuofcurrent">Esuofcurrent</ion-select-option>
+        <ion-select-option value="Franklinsecond">Franklinsecond</ion-select-option>
+        <ion-select-option value="Gaussian">Gaussian</ion-select-option>
+        <ion-select-option value="Gigaampere">Gigaampere</ion-select-option>
+        <ion-select-option value="Gilbert">Gilbert</ion-select-option>
+        <ion-select-option value="Megaampere">Megaampere</ion-select-option>
+        <ion-select-option value="Microampere">Microampere</ion-select-option>
+        <ion-select-option value="Milliamp">Milliamp</ion-select-option>
+        <ion-select-option value="Manoampere">Manoampere</ion-select-option>
+        <ion-select-option value="Picoampere">Picoampere</ion-select-option>
+        <ion-select-option value="Siemensvolt">Siemensvolt</ion-select-option>
+        <ion-select-option value="Statampere">Statampere</ion-select-option>
+        <ion-select-option value="Teraampere">Teraampere</ion-select-option>
+        <ion-select-option value="Voltohm">Voltohm</ion-select-option>
+        <ion-select-option value="Wattvolt">Wattvolt</ion-select-option>
+        <ion-select-option value="Weberhenry">Weberhenry</ion-select-option>
+
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-input type="number" [value]="result" (input)="setQuantity4($event.target.value)" (ionChange)="this.calculate()"></ion-input>
+
+      <ion-select value={select2} placeholder="Select One" (ionChange)="setQuantity2($event.target.value)">
+      
+        <ion-select-option value="Abampere">Abampere</ion-select-option>
+        <ion-select-option value="Ampere">Ampere</ion-select-option>
+        <ion-select-option value="Biot">Biot</ion-select-option>
+        <ion-select-option value="Centiampere">Centiampere</ion-select-option>
+        <ion-select-option value="Coulombsecond">Coulombsecond</ion-select-option>
+        <ion-select-option value="Emuofcurrent">Emuofcurrent</ion-select-option>
+        <ion-select-option value="Esuofcurrent">Esuofcurrent</ion-select-option>
+        <ion-select-option value="Franklinsecond">Franklinsecond</ion-select-option>
+        <ion-select-option value="Gaussian">Gaussian</ion-select-option>
+        <ion-select-option value="Gigaampere">Gigaampere</ion-select-option>
+        <ion-select-option value="Gilbert">Gilbert</ion-select-option>
+        <ion-select-option value="Megaampere">Megaampere</ion-select-option>
+        <ion-select-option value="Microampere">Microampere</ion-select-option>
+        <ion-select-option value="Milliamp">Milliamp</ion-select-option>
+        <ion-select-option value="Manoampere">Manoampere</ion-select-option>
+        <ion-select-option value="Picoampere">Picoampere</ion-select-option>
+        <ion-select-option value="Siemensvolt">Siemensvolt</ion-select-option>
+        <ion-select-option value="Statampere">Statampere</ion-select-option>
+        <ion-select-option value="Teraampere">Teraampere</ion-select-option>
+        <ion-select-option value="Voltohm">Voltohm</ion-select-option>
+        <ion-select-option value="Wattvolt">Wattvolt</ion-select-option>
+        <ion-select-option value="Weberhenry">Weberhenry</ion-select-option>
+
+      </ion-select>
+    </ion-item>
+      <ion-grid>
+        <ion-row>
+          <ion-col> <h1>{{range}} {{select1}} = {{result}} {{select2}} </h1></ion-col>
+          
+        </ion-row>
+      </ion-grid>
+  </ion-card-content>
+</ion-card>
+</center>
+

@@ -1,0 +1,76 @@
+<center>
+  <ion-card>
+  <ion-card-header>
+    <ion-card-subtitle>InstaConvert</ion-card-subtitle>
+    <ion-card-title> Power</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    <ion-item lines=none>
+      <ion-input type="number" [value]="range" (input)="setQuantity3($event.target.value)" (ionChange)="this.calculate()"></ion-input>
+
+      <ion-select value={select1} placeholder="Select One" (ionChange)="setQuantity1($event.target.value)">
+        <ion-select-option value="watts">watts</ion-select-option>
+        <ion-select-option value="kilowatts">kilowatts</ion-select-option>
+        <ion-select-option value="megawatts">megawatts</ion-select-option>
+        <ion-select-option value="gigawatts">gigawatts</ion-select-option>
+        <ion-select-option value="btuHour">btuHour</ion-select-option>
+        <ion-select-option value="btuMinute">btuMinute</ion-select-option>
+        <ion-select-option value="btuSecond">btuSecond</ion-select-option>
+        <ion-select-option value="caloriesthHour">caloriesthHour</ion-select-option>
+        <ion-select-option value="caloriesthMinute">caloriesthMinute</ion-select-option>
+        <ion-select-option value="caloriesthSecond">caloriesthSecond</ion-select-option>
+        <ion-select-option value="kilocaloriesthHour">kilocaloriesthHour</ion-select-option>
+        <ion-select-option value="kilocaloriesthMinute">kilocaloriesthMinute</ion-select-option>
+        <ion-select-option value="footPoundsForceMinute">footPoundsForceMinute</ion-select-option>
+        <ion-select-option value="footPoundsForceSecond">footPoundsForceSecond</ion-select-option>
+        <ion-select-option value="horsepowersElectric">horsepowersElectric</ion-select-option>
+        <ion-select-option value="horsepowersInternational">horsepowersInternational</ion-select-option>
+        <ion-select-option value="horsepowersWater">horsepowersWater</ion-select-option>
+        <ion-select-option value="horsepowersMetric">horsepowersMetric</ion-select-option>
+        <ion-select-option value="joulesHour">joulesHour</ion-select-option>
+        <ion-select-option value="joulesMinute">joulesMinute</ion-select-option>
+        <ion-select-option value="joulesSecond">joulesSecond</ion-select-option>
+        <ion-select-option value="kilogramForceMetersHour">kilogramForceMetersHour</ion-select-option>
+        <ion-select-option value="kilogramForceMetersMinute">kilogramForceMetersMinute</ion-select-option>
+
+      </ion-select>
+    </ion-item>
+    <ion-item lines=none>
+      <ion-input type="number" [value]="result" (input)="setQuantity4($event.target.value)" (ionChange)="this.calculate()"></ion-input>
+      <ion-select   value={select2} placeholder="Select One" (ionChange)="setQuantity2($event.target.value)">
+        <ion-select-option value="watts">watts</ion-select-option>
+        <ion-select-option value="kilowatts">kilowatts</ion-select-option>
+        <ion-select-option value="megawatts">megawatts</ion-select-option>
+        <ion-select-option value="gigawatts">gigawatts</ion-select-option>
+        <ion-select-option value="btuHour">btuHour</ion-select-option>
+        <ion-select-option value="btuMinute">btuMinute</ion-select-option>
+        <ion-select-option value="btuSecond">btuSecond</ion-select-option>
+        <ion-select-option value="caloriesthHour">caloriesthHour</ion-select-option>
+        <ion-select-option value="caloriesthMinute">caloriesthMinute</ion-select-option>
+        <ion-select-option value="caloriesthSecond">caloriesthSecond</ion-select-option>
+        <ion-select-option value="kilocaloriesthHour">kilocaloriesthHour</ion-select-option>
+        <ion-select-option value="kilocaloriesthMinute">kilocaloriesthMinute</ion-select-option>
+        <ion-select-option value="footPoundsForceMinute">footPoundsForceMinute</ion-select-option>
+        <ion-select-option value="footPoundsForceSecond">footPoundsForceSecond</ion-select-option>
+        <ion-select-option value="horsepowersElectric">horsepowersElectric</ion-select-option>
+        <ion-select-option value="horsepowersInternational">horsepowersInternational</ion-select-option>
+        <ion-select-option value="horsepowersWater">horsepowersWater</ion-select-option>
+        <ion-select-option value="horsepowersMetric">horsepowersMetric</ion-select-option>
+        <ion-select-option value="joulesHour">joulesHour</ion-select-option>
+        <ion-select-option value="joulesMinute">joulesMinute</ion-select-option>
+        <ion-select-option value="joulesSecond">joulesSecond</ion-select-option>
+        <ion-select-option value="kilogramForceMetersHour">kilogramForceMetersHour</ion-select-option>
+        <ion-select-option value="kilogramForceMetersMinute">kilogramForceMetersMinute</ion-select-option>
+  </ion-select>
+    </ion-item>
+      <ion-grid>
+        <ion-row>
+          <ion-col> <h1>{{range}} {{select1}} = {{result}} {{select2}} </h1></ion-col>
+          
+        </ion-row>
+      </ion-grid>
+  </ion-card-content>
+</ion-card>
+</center>
+

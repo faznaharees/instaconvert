@@ -1,0 +1,44 @@
+<center><ion-card>
+  <ion-card-header>
+    <ion-card-subtitle>InstaConvert</ion-card-subtitle>
+    <ion-card-title> Power</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    <ion-item lines=none>
+      <ion-input type="number" [value]="range" (input)="setQuantity3($event.target.value)" (ionChange)="this.calculate()"></ion-input>
+
+      <ion-select value={select1} placeholder="Select One" (ionChange)="setQuantity1($event.target.value)">
+        <ion-select-option value="nanoseconds">nanoseconds</ion-select-option>
+        <ion-select-option value="microseconds">microseconds</ion-select-option>
+        <ion-select-option value="milliseconds">milliseconds</ion-select-option>
+        <ion-select-option value="seconds">seconds</ion-select-option>
+        <ion-select-option value="minutes">minutes</ion-select-option>
+        <ion-select-option value="hours">hours</ion-select-option>
+        <ion-select-option value="days">days</ion-select-option>
+        <ion-select-option value="weeks">weeks</ion-select-option>
+        <ion-select-option value="months">months</ion-select-option>
+        <ion-select-option value="years">years</ion-select-option>
+        <ion-select-option value="decades">decades</ion-select-option>
+        <ion-select-option value="century">century</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item lines=none>
+      <ion-input type="number" [value]="result" (input)="setQuantity4($event.target.value)" (ionChange)="this.calculate()"></ion-input>
+      <ion-select   value={select2} placeholder="Select One" (ionChange)="setQuantity2($event.target.value)">
+        <ion-select-option value="mpgUs">mpgUs</ion-select-option>
+        <ion-select-option value="mpgImp">mpgImp</ion-select-option>
+        <ion-select-option value="kmLiter">kmLiter</ion-select-option>
+        <ion-select-option value="liter100km">liter100km</ion-select-option>
+     </ion-select>
+    </ion-item>
+      <ion-grid>
+        <ion-row>
+          <ion-col> <h1>{{range}} {{select1}} = {{result}} {{select2}} </h1></ion-col>
+          
+        </ion-row>
+      </ion-grid>
+  </ion-card-content>
+</ion-card>
+</center>
+
